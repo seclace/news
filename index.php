@@ -1,5 +1,7 @@
 <?php
 
-require __DIR__ . '/classes/DB.php';
+require_once __DIR__ . '/models/news.php';
 
-$db = new DB;
+$items = news::getAll();
+
+var_dump($items);

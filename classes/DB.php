@@ -13,14 +13,13 @@ class DB
     public function query($sql, $class = 'stdClass')
     {
         $result = mysqli_query($this->link, $sql);
-        if (false === $result) return false;
-
+        if (false === $result) {
+            return false;
+        }
         $ret = [];
-
-        while ($row = mysql_fetch_object($result, $class)) {
+        while ($row = mysqli_fetch_object($result)) {
             $ret[] = $row;
         }
-
         return $ret;
     }
 
