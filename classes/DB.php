@@ -17,7 +17,7 @@ class DB
             return false;
         }
         $ret = [];
-        while ($row = mysqli_fetch_object($result)) {
+        while ($row = mysqli_fetch_object($result, $class)) {
             $ret[] = $row;
         }
         return $ret;

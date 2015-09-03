@@ -13,6 +13,6 @@ class news
     {
         $db = new DB();
         $sql = 'select * from news';
-        return $db->query($sql);
+        return $db->query($sql, 'news');
     }
 }
