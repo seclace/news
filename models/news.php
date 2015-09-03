@@ -4,7 +4,6 @@ require_once __DIR__ . '/../classes/DB.php';
 
 class news
 {
-
     public $id;
     public $title;
     public $text;
@@ -12,7 +11,6 @@ class news
     public static function getAll()
     {
         $db = new DB();
-        $sql = 'select * from news';
-        return $db->query($sql, 'news');
+        return $db->query('select * from news', 'news');
     }
 }

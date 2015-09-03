@@ -3,5 +3,7 @@
 require_once __DIR__ . '/models/news.php';
 
 $items = news::getAll();
+foreach ($items as $item):
 
-var_dump($items);
+    endforeach;
+include __DIR__ . '/views/index.php';
