@@ -2,9 +2,6 @@
 
 class DB
 {
-    public $id;
-    public $title;
-    public $text;
     protected $link;
 
     public function __construct()
