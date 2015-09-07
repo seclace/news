@@ -1,6 +1,7 @@
 <?php
 
 class abstractModel
+    implements IModel
 {
     protected static $table;
     protected static $class;
