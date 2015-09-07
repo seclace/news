@@ -14,6 +14,6 @@ class abstractModel
     public static function getOne($id)
     {
         $db = new DB();
-        return $db->queryOne('select * from ' . static::$class . ' where id = ' . $id, static::$class);
+        return $db->queryOne('select * from ' . static::$table . ' where id = ' . $id, static::$class);
     }
 }

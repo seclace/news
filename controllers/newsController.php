@@ -4,15 +4,18 @@ class newsController
 {
     public function actionAll()
     {
-        $items = news::getAll();
-        include __DIR__ . '/../views/news/all.php';
+        $news = news::getAll();
+        $view = new view();
+        $view->items = $news;
+        $view->display('news/all.php');
     }
 
     public function actionOne()
     {
-        //echo 'actionOne';die;
         $id = $_GET['id'];
         $item = News::getOne($id);
-        include __DIR__ . '/../views/news/one.php';
+        $view = new view();
+        $view->item = $item;
+        $view->display('news/one.php');
     }
 }
